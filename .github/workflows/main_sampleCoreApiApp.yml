@@ -23,9 +23,9 @@ jobs:
         include-prerelease: true
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build sampleCoreAPIAppRepo/samplecorewebapi.sln --configuration Release
 
-    - name: dotnet publish
+    - name: dotnet publish sampleCoreAPIAppRepo/samplecorewebapi.sln
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Upload artifact for deployment job
